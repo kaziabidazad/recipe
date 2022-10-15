@@ -10,7 +10,7 @@ package com.duke.learn.recipe.dto;
 public class IngredientDTO implements CommonInput {
 
     private Integer ingredientId;
-    private String ingredientNameString;
+    private String ingredientName;
 
     /**
      * @return the ingredientId
@@ -27,22 +27,22 @@ public class IngredientDTO implements CommonInput {
     }
 
     /**
-     * @return the ingredientNameString
+     * @return the ingredientName
      */
-    public String getIngredientNameString() {
-	return ingredientNameString;
+    public String getIngredientName() {
+	return ingredientName;
     }
 
     /**
-     * @param ingredientNameString the ingredientNameString to set
+     * @param ingredientName the ingredientName to set
      */
-    public void setIngredientNameString(String ingredientNameString) {
-	this.ingredientNameString = ingredientNameString;
+    public void setIngredientName(String ingredientNameString) {
+	this.ingredientName = ingredientNameString;
     }
 
     @Override
     public String toString() {
-	return "Ingredients [ingredientId=" + ingredientId + ", ingredientNameString=" + ingredientNameString + "]";
+	return "Ingredients [ingredientId=" + ingredientId + ", ingredientName=" + ingredientName + "]";
     }
 
 }

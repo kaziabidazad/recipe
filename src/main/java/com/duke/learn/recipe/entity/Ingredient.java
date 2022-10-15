@@ -27,7 +27,7 @@ public class Ingredient implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ing_id")
+    @Column(name = "ingredient_id")
     private Integer id;
 
     @Column(name = "name")

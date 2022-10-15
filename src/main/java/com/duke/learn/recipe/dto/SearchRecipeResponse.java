@@ -9,7 +9,7 @@ import java.util.List;
  * @author Kazi
  *
  */
-public class SearchRecipeResponse implements CommonOutput {
+public class SearchRecipeResponse extends CommonResponse implements CommonOutput {
 
     private List<RecipeDTO> recipes;
 

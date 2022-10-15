@@ -23,6 +23,8 @@ public class RecipeDTO implements CommonInput {
 
     private List<IngredientDTO> ingredients;
 
+    private List<IngredientDTO> excludeIngredients;
+
     /**
      * @return the recipeId
      */
@@ -54,7 +56,7 @@ public class RecipeDTO implements CommonInput {
     /**
      * @return the vegeterian
      */
-    public Boolean isVegeterian() {
+    public Boolean getVegeterian() {
 	return vegeterian;
     }
 
@@ -107,11 +109,25 @@ public class RecipeDTO implements CommonInput {
 	this.ingredients = ingredients;
     }
 
+    /**
+     * @return the excludeIngredients
+     */
+    public List<IngredientDTO> getExcludeIngredients() {
+	return excludeIngredients;
+    }
+
+    /**
+     * @param excludeIngredients the ingredients to be excluded from search
+     */
+    public void setExcludeIngredients(List<IngredientDTO> excludeIngredients) {
+	this.excludeIngredients = excludeIngredients;
+    }
+
     @Override
     public String toString() {
-	return "RecipeRequest [recipeId=" + recipeId + ", recipeName=" + recipeName + ", vegeterian=" + vegeterian
+	return "RecipeDTO [recipeId=" + recipeId + ", recipeName=" + recipeName + ", vegeterian=" + vegeterian
 		+ ", servingSize=" + servingSize + ", instructions=" + instructions + ", ingredients=" + ingredients
-		+ "]";
+		+ ", excludeIngredients=" + excludeIngredients + "]";
     }
 
 }

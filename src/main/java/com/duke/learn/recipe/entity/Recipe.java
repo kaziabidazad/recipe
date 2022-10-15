@@ -46,7 +46,7 @@ public class Recipe implements Serializable {
     @Column(name = "instructions")
     private String instructions;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.PERSIST, CascadeType.MERGE })
     @JoinTable(name = "recipe_ingredients", joinColumns = { @JoinColumn(name = "recipe_id") }, inverseJoinColumns = {
 	    @JoinColumn(name = "ingredient_id") })
     private Set<Ingredient> ingredients;
