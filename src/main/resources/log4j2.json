@@ -33,14 +33,20 @@
 				"appender-ref": [
 					{
 						"ref": "File",
-						"level": "info"
+						"level": "INFO"
 					},
 					{
 						"ref": "Console-Appender",
-						"level": "info"
+						"level": "INFO"
 					}
 				]
-			}
+			},
+			"logger": [
+				{
+					"name": "org.hibernate.engine.internal.StatisticalLoggingSessionEventListener",
+					"level": "fatal"
+				}
+			]
 		}
 	}
 }
